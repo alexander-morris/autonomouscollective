@@ -26,7 +26,7 @@ angular.module('anonymous', [])
 		},{
 			"name" : "Jason Swearingen",
 			"type" : "marketing",
-			"title" : "Graphic Designers",
+			"title" : "Graphic Designer",
 			"bio" : "Jason is an experienced graphic designer. They currently manage the brand at theblockchaininstitute.org, and greatly enjoy communicating complex concepts visually.",
 			"imageUrl" : "https://static.theblockchaininstitute.org/wp-content/uploads/2019/05/Web_Jason-768x768.jpg"
 
@@ -71,6 +71,21 @@ angular.module('anonymous', [])
 		}
 	}
 
+	$scope.filterMembers = function (type) {
+		var newList = [];
+		for ( var l = 0; l < $scope.memberList.length; l++ ) {
+			if ( $scope.memberList[l].type === type ) {
+				newList.push($scope.memberList[l])
+			}
+		}
+
+		if ( newList.length > 0 ) {
+			$scope.memberListFiltered = newList
+		} else {
+			$scope.memberListFiltered = $scope.memberList
+		}
+
+	}
 
 	$scope.init()
 
