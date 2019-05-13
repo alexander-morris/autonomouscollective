@@ -1,0 +1,53 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/style.css" title="Default">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body  ng-app="anonymous" ng-controller="viewController">
+
+<section class="home {{isHidden.home}}">
+	<div>
+		<h1>
+			Autonomous <strong>Collective</strong> 
+		</h1>
+		<span>We are experienced professionals helping decentralized companies grow.</span>
+
+		<div class="services">
+			<a class="researchLink" ng-click="navTo('research')" href="#research">Research</a>
+			<a class="membersLink" ng-click="navTo('members')" href="#members">Members</a>
+		
+		</div>
+	</div>
+
+</section>
+
+
+<section id="members" class="members {{isHidden.members}}">
+	<div class="fullpageLeft">
+		<h1>Meet Our Members:</h1>
+		<span>The Autonomous Collective was founded to help experienced professionals build decentralized projects. We're passionate about solving unique problems, and we're in this to help make web3 a reality. <br><br>Contact us today at <a href="mailto:info@autonomouscollective.org">info@autonomouscollective.org</a> for more information.</span>
+		<div class="membersListFilters">
+			<a ng-repeat="x in memberTypes" ng-click="filterMembers(x)">{{x}}</a>		
+		</div>
+		<div class="memberListContainer">
+			<div class="memberListElement" ng-repeat="y in memberListFiltered">
+				<img src="{{y.imageUrl}}">
+				<div class="memberListDetails">
+					<h1>{{y.name}}</h1>
+					<span><strong>{{y.title}}</strong></span>
+					<span>{{y.bio}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="research" class="research {{isHidden.research}}">
+	
+</section>
+
+
+</body>
+</html>
