@@ -1,0 +1,12 @@
+header {
+	background: black;
+}	
+
+.header-content-inner h1 {
+	display: inline-block;
+}
+
+.header-content-inner strong {
+	margin-right: 0.25em;
+	color: #F05F40;
+}
