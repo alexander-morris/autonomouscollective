@@ -10,8 +10,14 @@ header {
 	margin-right: 0.25em;
 	color: #F05F40;
 }
+.portfolio-box {
+    overflow: hidden;
+    max-height: 227px;
+}
 a.btn.a {
     background-color: green !important;
+    margin-right: 1em;
+
 }
 section {
     min-height: 80vh;

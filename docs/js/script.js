@@ -4,8 +4,8 @@ angular.module('autonomous', [])
 	$scope.init = function () {
 		console.log('scope.init ran')
 		$scope.counter = 0;
-		$scope.currentName = "what"
-		$scope.headerText = "do you want to do?"
+		$scope.currentName = "Progress"
+		$scope.headerText = "starts with people."
 
 	    $interval(function(){
 	        getWhat();
@@ -15,12 +15,16 @@ angular.module('autonomous', [])
 
 	function getWhat () {
 		var options = [
-			["what","do you want to do?"],
-			["where","do you want to do it?"],
-			["who","do you want to be?"],
-			["why","don't you want to stop?"],
-			["how","haven't you started yet?"],
-			["when","are you going to do it?"]
+			["Progress","starts with people."],
+			["Progress","start with people."],
+			["Projects","start with people."],
+			["Projects","start with people."],
+			["Projects","start with people."],
+			["Projects","start with people."],
+			["People","start with people."],
+			["People","start with people."],
+			["People","start with people."],
+			["People","start with people."]
 		]
 
 		$scope.currentName = (options[$scope.counter])[0];
