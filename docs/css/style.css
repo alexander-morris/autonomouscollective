@@ -10,3 +10,15 @@ header {
 	margin-right: 0.25em;
 	color: #F05F40;
 }
+a.btn.a {
+    background-color: green !important;
+}
+section {
+    min-height: 80vh;
+}
+.header-content h3 {
+    margin: 1em;
+    font-size: 1.45em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
